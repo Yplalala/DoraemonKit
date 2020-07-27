@@ -12,6 +12,8 @@
 #import "DoraemonTimeProfiler.h"
 //#import <CocoaLumberjack/CocoaLumberjack.h>
 #import "DoraemonUtil.h"
+#import <MMKV.h>
+
 //#import "SDImageWebPCoder.h"
 #import <DoraemonKit/DoraemonAppInfoViewController.h>
 
@@ -29,6 +31,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [[MMKV defaultMMKV]setDate:[NSDate date] forKey:@"date"];
+    [[MMKV defaultMMKV]setString:@"test"  forKey:@"str"];
+
     //[DoraemonTimeProfiler startRecord];
     
     //[[self class] handleCCrashReportWrap];

@@ -23,22 +23,29 @@ PODS:
   - CocoaLumberjack (3.6.1):
     - CocoaLumberjack/Core (= 3.6.1)
   - CocoaLumberjack/Core (3.6.1)
-  - DoraemonKit/Core (3.0.2)
+  - DoraemonKit/Core (3.0.2):
+    - MMKV
   - DoraemonKit/WithDatabase (3.0.2):
     - DoraemonKit/Core
+    - MMKV
     - YYDebugDatabase
   - DoraemonKit/WithGPS (3.0.2):
     - DoraemonKit/Core
+    - MMKV
   - DoraemonKit/WithLoad (3.0.2):
     - DoraemonKit/Core
+    - MMKV
   - DoraemonKit/WithLogger (3.0.2):
     - CocoaLumberjack
     - DoraemonKit/Core
+    - MMKV
   - DoraemonKit/WithMLeaksFinder (3.0.2):
     - DoraemonKit/Core
     - FBRetainCycleDetector
+    - MMKV
   - DoraemonKit/WithWeex (3.0.2):
     - DoraemonKit/Core
+    - MMKV
     - WeexSDK
     - WXDevtool
   - FBRetainCycleDetector (0.1.4)
@@ -48,6 +55,9 @@ PODS:
   - GCDWebServer (3.5.3):
     - GCDWebServer/Core (= 3.5.3)
   - GCDWebServer/Core (3.5.3)
+  - MMKV (1.1.2):
+    - MMKVCore (~> 1.1.2)
+  - MMKVCore (1.1.2)
   - SDWebImage (5.0.6):
     - SDWebImage/Core (= 5.0.6)
   - SDWebImage/Core (5.0.6)
@@ -79,6 +89,8 @@ SPEC REPOS:
     - CocoaLumberjack
     - FMDB
     - GCDWebServer
+    - MMKV
+    - MMKVCore
     - SDWebImage
     - SocketRocket
     - WeexSDK
@@ -103,10 +115,12 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
-  DoraemonKit: 6dffe62a7f0baf9bf4b0173ac4354257182d47ea
+  DoraemonKit: 9b7a325f0818fec6333ba51dbf0b5acdbc414188
   FBRetainCycleDetector: 46daef95c2dfa9be34b53087edf6a8f34e4c749c
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GCDWebServer: c0ab22c73e1b84f358d1e2f74bf6afd1c60829f2
+  MMKV: 319aede3b690572ad00bada5831146c63da3d009
+  MMKVCore: ae976ab3f019a3e4448f884353e0557b324ff136
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   WeexSDK: 55b67d1c411eb28ec1e356f763a335d0ddcc5324
