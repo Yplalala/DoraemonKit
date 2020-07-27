@@ -266,19 +266,21 @@ typedef void (^DoraemonPerformanceBlock)(NSDictionary *);
     
     #pragma mark - Weex专项工具
     #if DoraemonWithWeex
-        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexLogPlugin];
-        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexStoragePlugin];
-        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexInfoPlugin];
-        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexDevToolPlugin];
+//        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexLogPlugin];
+//        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexStoragePlugin];
+//        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexInfoPlugin];
+//        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexDevToolPlugin];
     
     
-        [self addPluginWithPluginType:DoraemonManagerPluginType_UmeDoraemonBDPlugin];
-        [self addPluginWithPluginType:DoraemonManagerPluginType_UmeNullPointerPlugin];
-        [self addPluginWithPluginType:DoraemonManagerPluginType_UmeNMMKVlugin];
-
     
 
     #endif
+    
+    [self addPluginWithPluginType:DoraemonManagerPluginType_UmeDoraemonBDPlugin];
+    [self addPluginWithPluginType:DoraemonManagerPluginType_UmeNullPointerPlugin];
+    [self addPluginWithPluginType:DoraemonManagerPluginType_UmeNMMKVlugin];
+
+
 }
 
 /**
@@ -735,7 +737,7 @@ typedef void (^DoraemonPerformanceBlock)(NSDictionary *);
                                    @{kDesc:@"umedb"},
                                    @{kIcon:@"doraemon_log"},
                                    @{kPluginName:@"UmeDoraemonBDPlugin"},
-                                   @{kAtModule:@"Weex"},
+                                   @{kAtModule:@"ume"},
                                    @{kBuriedPoint:@"dokit_sdk_weex_ck_log"}
                            ],
                            @(DoraemonManagerPluginType_UmeNMMKVlugin) : @[
@@ -743,7 +745,7 @@ typedef void (^DoraemonPerformanceBlock)(NSDictionary *);
                                    @{kDesc:@"MMKV"},
                                    @{kIcon:@"doraemon_log"},
                                    @{kPluginName:@"UmeDoraemonMMKVPlugin"},
-                                   @{kAtModule:@"Weex"},
+                                   @{kAtModule:@"ume"},
                                    @{kBuriedPoint:@"dokit_sdk_weex_ck_log"}
                            ],
                            @(DoraemonManagerPluginType_UmeNullPointerPlugin) : @[
@@ -751,7 +753,7 @@ typedef void (^DoraemonPerformanceBlock)(NSDictionary *);
                                    @{kDesc:@"NullPointer"},
                                    @{kIcon:@"doraemon_log"},
                                    @{kPluginName:@"UmeDoraemonNullPointerPlugin"},
-                                   @{kAtModule:@"Weex"},
+                                   @{kAtModule:@"ume"},
                                    @{kBuriedPoint:@"dokit_sdk_weex_ck_log"}
                            ],
 
