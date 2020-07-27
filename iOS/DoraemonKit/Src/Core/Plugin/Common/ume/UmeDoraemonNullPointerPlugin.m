@@ -6,7 +6,15 @@
 //
 
 #import "UmeDoraemonNullPointerPlugin.h"
+#import "DoraemonHomeWindow.h"
+#import "UmeDoraemonNUllPointerViewController.h"
 
 @implementation UmeDoraemonNullPointerPlugin
+
+
+- (void)pluginDidLoad{
+    UmeDoraemonNUllPointerViewController *vc = [[UmeDoraemonNUllPointerViewController alloc] init];
+    [DoraemonHomeWindow openPlugin:vc];
+}
 
 @end

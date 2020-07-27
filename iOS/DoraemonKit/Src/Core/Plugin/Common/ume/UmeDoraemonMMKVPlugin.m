@@ -6,7 +6,15 @@
 //
 
 #import "UmeDoraemonMMKVPlugin.h"
+#import "DoraemonHomeWindow.h"
+#import "UmeDoraemonMMKVViewController.h"
 
 @implementation UmeDoraemonMMKVPlugin
+
+- (void)pluginDidLoad{
+    UmeDoraemonMMKVViewController *vc = [[UmeDoraemonMMKVViewController alloc] init];
+    [DoraemonHomeWindow openPlugin:vc];
+}
+
 
 @end

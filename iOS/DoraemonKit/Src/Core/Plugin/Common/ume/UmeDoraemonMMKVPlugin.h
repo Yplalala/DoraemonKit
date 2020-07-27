@@ -6,10 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DoraemonPluginProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UmeDoraemonMMKVPlugin : NSObject
+@interface UmeDoraemonMMKVPlugin : NSObject<DoraemonPluginProtocol>
 
 @end
 
