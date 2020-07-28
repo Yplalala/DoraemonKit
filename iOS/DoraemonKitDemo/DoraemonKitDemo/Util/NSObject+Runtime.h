@@ -26,4 +26,10 @@
  */
 + (void)swizzleInstanceMethodWithOriginSel:(SEL)oriSel swizzledSel:(SEL)swiSel;
 
+
++ (void)safe_instanceSwizzleMethodWithClass:(Class _Nonnull )klass
+                              orginalMethod:(SEL _Nonnull )originalSelector
+                               replaceClass:(Class _Nonnull )rlass
+                              replaceMethod:(SEL _Nonnull )replaceSelector ;
+
 @end
