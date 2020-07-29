@@ -28,8 +28,6 @@ Pod::Spec.new do |s|
     ss.resource_bundles = {
       'DoraemonKit' => 'iOS/DoraemonKit/Resource/**/*'
     }
-    s.dependency 'MMKV'
-
   end
 
   s.subspec 'WithLogger' do |ss| 
