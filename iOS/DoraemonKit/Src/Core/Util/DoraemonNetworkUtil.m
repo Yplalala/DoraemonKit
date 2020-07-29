@@ -57,6 +57,7 @@
 // get 请求
 + (void)getWithUrlString:(NSString *)url params:(NSDictionary *)params success:(DoraemonNetworkSucceedCallback)successAction
                    error:(DoraemonNetworkFailureCallback)errorAction{
+    return;
     NSMutableString *mutableUrl = [[NSMutableString alloc] initWithString:url];
     if ([params allKeys].count>0) {
         [mutableUrl appendString:@"?"];

@@ -58,6 +58,7 @@
 }
 
 - (void)queryMockData:(void(^)(int flag))block{
+    
     NSString *pId = [DoraemonManager shareInstance].pId;
     if (pId && pId.length>0) {
         NSDictionary *params = @{

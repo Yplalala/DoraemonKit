@@ -23,7 +23,8 @@ PODS:
   - CocoaLumberjack (3.6.1):
     - CocoaLumberjack/Core (= 3.6.1)
   - CocoaLumberjack/Core (3.6.1)
-  - DoraemonKit/Core (3.0.2)
+  - DoraemonKit/Core (3.0.2):
+    - MMKV
   - DoraemonKit/WithDatabase (3.0.2):
     - DoraemonKit/Core
     - YYDebugDatabase
@@ -45,30 +46,21 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - GCDWebServer (3.5.3):
-    - GCDWebServer/Core (= 3.5.3)
-  - GCDWebServer/Core (3.5.3)
-  - libwebp (1.1.0):
-    - libwebp/demux (= 1.1.0)
-    - libwebp/mux (= 1.1.0)
-    - libwebp/webp (= 1.1.0)
-  - libwebp/demux (1.1.0):
-    - libwebp/webp
-  - libwebp/mux (1.1.0):
-    - libwebp/demux
-  - libwebp/webp (1.1.0)
-  - SDWebImage (5.0.6):
-    - SDWebImage/Core (= 5.0.6)
-  - SDWebImage/Core (5.0.6)
-  - SDWebImageWebPCoder (0.3.1):
-    - libwebp (~> 1.0)
-    - SDWebImage/Core (~> 5.0)
+  - GCDWebServer (3.5.4):
+    - GCDWebServer/Core (= 3.5.4)
+  - GCDWebServer/Core (3.5.4)
+  - MMKV (1.1.2):
+    - MMKVCore (~> 1.1.2)
+  - MMKVCore (1.1.2)
+  - SDWebImage (5.5.2):
+    - SDWebImage/Core (= 5.5.2)
+  - SDWebImage/Core (5.5.2)
   - SocketRocket (0.5.1)
   - WeexSDK (0.26.0)
   - WXDevtool (0.24.0):
     - SocketRocket
     - WeexSDK
-  - YYDebugDatabase (2.0.8):
+  - YYDebugDatabase (2.0.9):
     - FMDB
     - GCDWebServer
 
@@ -83,7 +75,6 @@ DEPENDENCIES:
   - DoraemonKit/WithWeex (from `../../`)
   - FBRetainCycleDetector (from `https://github.com/facebook/FBRetainCycleDetector.git`)
   - SDWebImage
-  - SDWebImageWebPCoder
   - YYDebugDatabase (from `https://github.com/y500/YYDebugDatabase.git`)
 
 SPEC REPOS:
@@ -92,9 +83,9 @@ SPEC REPOS:
     - CocoaLumberjack
     - FMDB
     - GCDWebServer
-    - libwebp
+    - MMKV
+    - MMKVCore
     - SDWebImage
-    - SDWebImageWebPCoder
     - SocketRocket
     - WeexSDK
     - WXDevtool
@@ -112,24 +103,24 @@ CHECKOUT OPTIONS:
     :commit: 1ff2adee84a6ee94a1ae82526104a188774eb90a
     :git: https://github.com/facebook/FBRetainCycleDetector.git
   YYDebugDatabase:
-    :commit: b68105eb0784aede05036616c0b94d26b8d97ad0
+    :commit: 94d2eaf722280a61d7e48b203ee5b12ce741b61a
     :git: https://github.com/y500/YYDebugDatabase.git
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
-  DoraemonKit: 6dffe62a7f0baf9bf4b0173ac4354257182d47ea
+  DoraemonKit: 5d139738595a4eabc1babda343779f68b98a0f48
   FBRetainCycleDetector: 46daef95c2dfa9be34b53087edf6a8f34e4c749c
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  GCDWebServer: c0ab22c73e1b84f358d1e2f74bf6afd1c60829f2
-  libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
-  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
-  SDWebImageWebPCoder: ce58a29621c2806dd5c36695ed192cf67163ff9d
+  GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
+  MMKV: 319aede3b690572ad00bada5831146c63da3d009
+  MMKVCore: ae976ab3f019a3e4448f884353e0557b324ff136
+  SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   WeexSDK: 55b67d1c411eb28ec1e356f763a335d0ddcc5324
   WXDevtool: 95b70c73c06fc3299d65bd53ba4b3e0b0087f3cb
-  YYDebugDatabase: 037486297a7dd40bc50e2c6df5de7b4ad24c9c17
+  YYDebugDatabase: e9e1d2a92c32b29c8a2777e3a49d34f8133efae0
 
-PODFILE CHECKSUM: 5f1dcd15ca63a6c44978b50f105166e29d3a9fd4
+PODFILE CHECKSUM: e7ab37bcdfb4e3e07e9250abeb5671ab29112a4f
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3
