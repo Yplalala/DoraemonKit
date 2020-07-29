@@ -17,7 +17,6 @@
 		0AA262E1240F8AC400BF144F /* DoraemonDemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA262E0240F8AC400BF144F /* DoraemonDemoBaseViewController.m */; };
 		0AC7509C246A8EE100F87363 /* WebpDemo.webp in Resources */ = {isa = PBXBuildFile; fileRef = 0AC7509B246A8B4900F87363 /* WebpDemo.webp */; };
 		0AFBC55223BAE6F80099A8BD /* DoraemonDemoNetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBC55023BAE6F80099A8BD /* DoraemonDemoNetTableViewCell.m */; };
-		52EEF8CC24D145AE0083CE9B /* ZombieTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EEF8CB24D145AE0083CE9B /* ZombieTestViewController.m */; };
 		B65C2263AF96F94C50A222DF /* libPods-DoraemonKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E964A2D92411C9DC5482EF /* libPods-DoraemonKitDemo.a */; };
 		DA0C6F331FDEBC2E00F43588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0C6F311FDEBC2E00F43588 /* LaunchScreen.storyboard */; };
 		DA0C6F3A1FDEBE3800F43588 /* TestPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C6F391FDEBE3800F43588 /* TestPlugin.m */; };
@@ -70,8 +69,6 @@
 		0AFBC55023BAE6F80099A8BD /* DoraemonDemoNetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoraemonDemoNetTableViewCell.m; sourceTree = "<group>"; };
 		0AFBC55123BAE6F80099A8BD /* DoraemonDemoNetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoraemonDemoNetTableViewCell.h; sourceTree = "<group>"; };
 		29E964A2D92411C9DC5482EF /* libPods-DoraemonKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DoraemonKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		52EEF8CA24D145AE0083CE9B /* ZombieTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZombieTestViewController.h; sourceTree = "<group>"; };
-		52EEF8CB24D145AE0083CE9B /* ZombieTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZombieTestViewController.m; sourceTree = "<group>"; };
 		DA0C6F321FDEBC2E00F43588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA0C6F381FDEBE3800F43588 /* TestPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPlugin.h; sourceTree = "<group>"; };
 		DA0C6F391FDEBE3800F43588 /* TestPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPlugin.m; sourceTree = "<group>"; };
@@ -177,15 +174,6 @@
 				0AFBC55023BAE6F80099A8BD /* DoraemonDemoNetTableViewCell.m */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		52EEF8C924D145800083CE9B /* Zombie */ = {
-			isa = PBXGroup;
-			children = (
-				52EEF8CA24D145AE0083CE9B /* ZombieTestViewController.h */,
-				52EEF8CB24D145AE0083CE9B /* ZombieTestViewController.m */,
-			);
-			path = Zombie;
 			sourceTree = "<group>";
 		};
 		6BF226158409D1338AF520EC /* Pods */ = {
@@ -302,7 +290,6 @@
 		DAFE050521BD4A4C00F97A59 /* DemoVC */ = {
 			isa = PBXGroup;
 			children = (
-				52EEF8C924D145800083CE9B /* Zombie */,
 				0AA262DE240F8A7700BF144F /* Base */,
 				0A5399822349ECF000C47CB3 /* MemoryLeak */,
 				DAFE050621BD4A4C00F97A59 /* UI */,
@@ -565,7 +552,6 @@
 				DAE7BFAD20205C20008D49D8 /* NSObject+Runtime.m in Sources */,
 				DABBE3B521D3AA4D0070518E /* DoraemonWKWebViewViewController.m in Sources */,
 				DAFE052D21BD4A4D00F97A59 /* DoraemonDemoMockGPSAnnotation.m in Sources */,
-				52EEF8CC24D145AE0083CE9B /* ZombieTestViewController.m in Sources */,
 				DAFE052921BD4A4D00F97A59 /* DoraemonDemoCrashViewController.m in Sources */,
 				DA0C6F3A1FDEBE3800F43588 /* TestPlugin.m in Sources */,
 				DABBE3B221D3AA260070518E /* DoraemonUIWebViewViewController.m in Sources */,
@@ -733,7 +719,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = SDDQPFH678;
+				DEVELOPMENT_TEAM = 2M632FEG3H;
 				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DoraemonKitDemo/DoraemonKitDemo-PrefixHeader.pch";
@@ -753,7 +739,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SDDQPFH678;
+				DEVELOPMENT_TEAM = 2M632FEG3H;
 				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DoraemonKitDemo/DoraemonKitDemo-PrefixHeader.pch";

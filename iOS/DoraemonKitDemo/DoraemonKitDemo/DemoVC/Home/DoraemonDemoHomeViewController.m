@@ -19,7 +19,6 @@
 #import "UIView+Doraemon.h"
 #import "UIViewController+Doraemon.h"
 #import "DoraemonDemoMemoryLeakViewController.h"
-#import "ZombieTestViewController.h"
 
 @interface DoraemonDemoHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -49,7 +48,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return 9;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -78,8 +77,6 @@
         txt = DoraemonDemoLocalizedString(@"通用测试Demo");
     }else if(row==8){
         txt = DoraemonDemoLocalizedString(@"内存泄漏测试");
-    }else if(row==9){
-        txt = DoraemonDemoLocalizedString(@"zombie test");
     }
     cell.textLabel.text = txt;
     return cell;
@@ -104,10 +101,8 @@
         vc = [[DoraemonDemoCrashViewController alloc] init];
     }else if(row == 7){
         vc = [[DoraemonDemoCommonViewController alloc] init];
-    }else if(row == 8){
+    }else{
         vc = [[DoraemonDemoMemoryLeakViewController alloc] init];
-    }else {
-        vc = [[ZombieTestViewController alloc] init];
     }
     [self.navigationController pushViewController:vc animated:YES];
  
