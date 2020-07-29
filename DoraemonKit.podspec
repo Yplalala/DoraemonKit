@@ -29,8 +29,6 @@ Pod::Spec.new do |s|
       'DoraemonKit' => 'iOS/DoraemonKit/Resource/**/*'
     }
     s.dependency 'MMKV'
-    s.requires_arc = false
-    s.requires_arc = ['ELDiagnosis/Classes/ARC/**/*.m']
   end
 
   s.subspec 'WithLogger' do |ss| 
