@@ -121,7 +121,15 @@
 #pragma mark - Private
 - (void)_throwMessageSentExceptionWithSelector: (SEL)selector
 {
-    @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"(-[%@ %@]) was sent to a zombie object at address: %p", NSStringFromClass(self.originClass), NSStringFromSelector(selector), self] userInfo:nil];
+    NSString * info = [NSString stringWithFormat:@"(-[%@ %@]) was sent to a zombie object at address: %p", NSStringFromClass(self.originClass), NSStringFromSelector(selector), self];
+    
+    BOOL save = [[NSUserDefaults standardUserDefaults] boolForKey:ZombieStatusNotLog?:@""];
+    if (!save) {
+        [[NSUserDefaults standardUserDefaults] setValue:info forKey:ZombieInfo?:@""];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:info userInfo:nil];
 }
 
 

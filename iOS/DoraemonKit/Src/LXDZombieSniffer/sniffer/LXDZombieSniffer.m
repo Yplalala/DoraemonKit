@@ -13,6 +13,7 @@
 
 typedef void (*LXDDeallocPointer) (id obj);
 static BOOL _enabled = NO;
+static BOOL _saveInfo = YES;
 static NSArray *_rootClasses = nil;
 static NSDictionary<id, NSValue *> *_rootClassDeallocImps = nil;
 
@@ -49,7 +50,6 @@ static inline IMP __lxd_swizzleMethodWithBlock(Method method, void *block) {
 
 
 @implementation LXDZombieSniffer
-
 
 + (void)initialize {
     _rootClasses = [@[[NSObject class], [NSProxy class]] retain];
@@ -133,5 +133,28 @@ static inline IMP __lxd_swizzleMethodWithBlock(Method method, void *block) {
     _rootClassDeallocImps = nil;
 }
 
++ (BOOL)isRunning{
+    return _enabled;
+}
+
+
++ (BOOL)saveInfoLocial{
+    
+    return ![[NSUserDefaults standardUserDefaults] boolForKey:ZombieStatusNotLog?:@""];
+}
+
++ (void)saveInfoLocial:(BOOL)status{
+    _saveInfo = status;
+    [[NSUserDefaults standardUserDefaults] setBool:!_saveInfo forKey:ZombieStatusNotLog?:@""];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (NSString *)lastZombieInfo{
+    NSString * info = [[NSUserDefaults standardUserDefaults] objectForKey:ZombieInfo?:@""];
+    if ([info isKindOfClass:[NSString class]] && info.length > 0) {
+        return info;
+    }
+    return nil;
+}
 
 @end

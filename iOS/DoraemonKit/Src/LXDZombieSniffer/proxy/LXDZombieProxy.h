@@ -6,6 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
+static const NSString * ZombieStatusNotLog = @"ZombieStatusNotLog";
+static const NSString * ZombieInfo   = @"ZombieInfo";
 
 /*!
  *  @class  LXDZombieProxy
@@ -14,5 +16,6 @@
 @interface LXDZombieProxy : NSProxy
 
 @property (nonatomic, assign) Class originClass;
+
 
 @end
