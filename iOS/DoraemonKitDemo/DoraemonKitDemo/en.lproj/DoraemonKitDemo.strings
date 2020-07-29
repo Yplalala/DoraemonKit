@@ -71,4 +71,5 @@
     //Other
     "block方式加入插件"                       = "Add plugins from block";
     "测试插件"                                     = "Test plugin";
+    "zombie test"                           = "zombie test";
 }

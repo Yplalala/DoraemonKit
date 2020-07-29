@@ -266,11 +266,21 @@ typedef void (^DoraemonPerformanceBlock)(NSDictionary *);
     
     #pragma mark - Weex专项工具
     #if DoraemonWithWeex
-        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexLogPlugin];
-        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexStoragePlugin];
-        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexInfoPlugin];
-        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexDevToolPlugin];
+//        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexLogPlugin];
+//        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexStoragePlugin];
+//        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexInfoPlugin];
+//        [self addPluginWithPluginType:DoraemonManagerPluginType_DoraemonWeexDevToolPlugin];
+    
+    
+    
+
     #endif
+    
+    [self addPluginWithPluginType:DoraemonManagerPluginType_UmeDoraemonBDPlugin];
+    [self addPluginWithPluginType:DoraemonManagerPluginType_UmeNullPointerPlugin];
+    [self addPluginWithPluginType:DoraemonManagerPluginType_UmeNMMKVlugin];
+
+
 }
 
 /**
@@ -721,7 +731,33 @@ typedef void (^DoraemonPerformanceBlock)(NSDictionary *);
                                   @{kPluginName:@"DoraemonHealthPlugin"},
                                   @{kAtModule:DoraemonLocalizedString(@"平台工具")},
                                   @{kBuriedPoint:@"dokit_sdk_platform_ck_health"}
-                                  ]
+                                  ],
+                           @(DoraemonManagerPluginType_UmeDoraemonBDPlugin) : @[
+                                   @{kTitle:DoraemonLocalizedString(@"数据库ume")},
+                                   @{kDesc:@"umedb"},
+                                   @{kIcon:@"doraemon_log"},
+                                   @{kPluginName:@"UmeDoraemonBDPlugin"},
+                                   @{kAtModule:@"ume"},
+                                   @{kBuriedPoint:@"dokit_sdk_weex_ck_log"}
+                           ],
+                           @(DoraemonManagerPluginType_UmeNMMKVlugin) : @[
+                                   @{kTitle:DoraemonLocalizedString(@"MMKV")},
+                                   @{kDesc:@"MMKV"},
+                                   @{kIcon:@"doraemon_log"},
+                                   @{kPluginName:@"UmeDoraemonMMKVPlugin"},
+                                   @{kAtModule:@"ume"},
+                                   @{kBuriedPoint:@"dokit_sdk_weex_ck_log"}
+                           ],
+                           @(DoraemonManagerPluginType_UmeNullPointerPlugin) : @[
+                                   @{kTitle:DoraemonLocalizedString(@"野指针")},
+                                   @{kDesc:@"NullPointer"},
+                                   @{kIcon:@"doraemon_log"},
+                                   @{kPluginName:@"UmeDoraemonNullPointerPlugin"},
+                                   @{kAtModule:@"ume"},
+                                   @{kBuriedPoint:@"dokit_sdk_weex_ck_log"}
+                           ],
+
+
                            }[@(pluginType)];
     
     DoraemonManagerPluginTypeModel *model = [DoraemonManagerPluginTypeModel new];

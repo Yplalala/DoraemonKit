@@ -28,6 +28,9 @@ Pod::Spec.new do |s|
     ss.resource_bundles = {
       'DoraemonKit' => 'iOS/DoraemonKit/Resource/**/*'
     }
+    s.dependency 'MMKV'
+    s.requires_arc = false
+    s.requires_arc = ['ELDiagnosis/Classes/ARC/**/*.m']
   end
 
   s.subspec 'WithLogger' do |ss| 
@@ -83,5 +86,14 @@ Pod::Spec.new do |s|
     ss.dependency 'DoraemonKit/Core'
     ss.dependency 'FBRetainCycleDetector'
   end
+  
+  s.subspec 'WithLXDZombieSniffer' do |ss|
+    ss.source_files = 'iOS/DoraemonKit/Src/LXDZombieSniffer/**/*{.h,.m}'
+    ss.pod_target_xcconfig = {
+      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) DoraemonWithLXDZombieSniffer'
+    }
+    ss.requires_arc = false
+  end
+  
 end
 
