@@ -16,9 +16,9 @@ end
 
 target :'DoraemonKitDemo' do
   #pod 'WeexSDK', :git => 'git@github.com:apache/incubator-weex.git', :tag => '0.26.0'
-  #pod 'DoraemonKit', :subspecs => ['Core','WithLogger','WithGPS','WithLoad','WithWeex', 'WithDatabase', 'WithMLeaksFinder'],  :path => '../../'
+  #pod 'DoraemonKit', :subspecs => ['Core','WithLogger','WithGPS','WithLoad','WithWeex', 'WithDatabase', 'WithMLeaksFinder',"WithLXDZombieSniffer"],  :path => '../../'
   #pod 'DoraemonKit', :subspecs => ['Core'],  :path => '../../'
-  pod 'DoraemonKit', :subspecs => ['Core','WithLogger','WithGPS','WithLoad','WithDatabase', 'WithMLeaksFinder','WithWeex'], :path => '../../'
+  pod 'DoraemonKit', :subspecs => ['Core','WithLogger','WithGPS','WithLoad','WithDatabase', 'WithMLeaksFinder','WithWeex',"WithLXDZombieSniffer"], :path => '../../'
   pod 'AFNetworking','2.6.3'
   pod 'SDWebImage'
   #  pod 'SDWebImageWebPCoder'
