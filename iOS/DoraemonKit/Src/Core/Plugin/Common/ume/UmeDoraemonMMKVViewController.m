@@ -52,7 +52,7 @@
   if (self.keyArray.count > indexPath.row) {
       NSString * key = self.keyArray[indexPath.row];
 //      cell.textLabel.text = key;
-      cell.textLabel.text = [NSString stringWithFormat:@"%@:%@",key,[[MMKV defaultMMKV]getStringForKey:key]?:@"不是字符串类型"];
+      cell.textLabel.text = [NSString stringWithFormat:@"key:%@ \r\n value:%@",key,[[MMKV defaultMMKV]getStringForKey:key]?:@"不是字符串类型"];
   }
   
   return cell;
