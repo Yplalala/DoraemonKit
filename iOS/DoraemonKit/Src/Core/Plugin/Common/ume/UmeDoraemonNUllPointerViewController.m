@@ -6,6 +6,7 @@
 //
 
 #import "UmeDoraemonNUllPointerViewController.h"
+#import "LXDZombieSniffer.h"
 
 @interface UmeDoraemonNUllPointerViewController ()
 
@@ -17,17 +18,35 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"野指针";
+    
+    UILabel * nameLabel = [[UILabel alloc] init];
+    nameLabel.frame = CGRectMake(0, 0, 160, 30);
+    nameLabel.center = CGPointMake(self.view.frame.size.width/2, 120);
+    nameLabel.text = @"LXDZombieSniffer";
+    nameLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:nameLabel];
 
+    UIButton * startBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [startBtn setBackgroundColor:[UIColor lightGrayColor]];
+    [startBtn setTitle:@"开始" forState:UIControlStateNormal];
+    [startBtn addTarget:self action:@selector(beginAction:) forControlEvents:UIControlEventTouchUpInside];
+    startBtn.frame = CGRectMake(50, 160, 50, 44);
+    [self.view addSubview:startBtn];
+    
+    UIButton * closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [closeBtn setBackgroundColor:[UIColor lightGrayColor]];
+    [closeBtn setTitle:@"关闭" forState:UIControlStateNormal];
+    [closeBtn addTarget:self action:@selector(closeAction:) forControlEvents:UIControlEventTouchUpInside];
+    closeBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 100, 160, 50, 44);
+    [self.view addSubview:closeBtn];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)beginAction:(UIButton *)button{
+    [LXDZombieSniffer installSniffer];
 }
-*/
 
+- (void)closeAction:(UIButton *)button{
+    [LXDZombieSniffer uninstallSnifier];
+}
 @end
